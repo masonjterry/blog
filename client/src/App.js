@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 import axios from "axios";
+import Home from "./pages/Home";
+import Add from "./pages/Add";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-class App extends Component {
+class App extends React.Component {
   state = {
     text: "anyone there?"
   };
@@ -17,16 +18,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
+      <div>
+        <Home />
+        <Add />
         <p>{this.state.text}</p>
         <button onClick={this.sayHello}>Click</button>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     );
   }
