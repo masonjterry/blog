@@ -1,2 +1,3 @@
-# blog
-Personal Blog
+# Mason Terry Blog
+
+### React Blog
